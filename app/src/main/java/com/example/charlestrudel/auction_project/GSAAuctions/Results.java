@@ -6,7 +6,7 @@ import java.util.List;
  * Created by Charles Trudel on 2016-03-24.
  */
 public class Results {
-    /*public String LotNo;
+    public String LotNo;
     public String AucStartDt;
     public String AucEndDt;
     public String ItemName;
@@ -23,16 +23,15 @@ public class Results {
     public String LocationST;
     public int BiddersCount;
     public List<LotInfo> LotInfos;
-    public String LotNo;
-    public String LotNo;
-    public String LotNo;
-    public String LotNo;
-    public String LotNo;
-    public String LotNo;
-    public String LotNo;
-    public String LotNo;
-    public String LotNo;
-    public String LotNo;
-*/
+    public String ContractOfficer;
+    public String COEmail;
+    public String COPhone;
+    public String Reserve;
+    public float AucIncrement;
+    public float HighBidAmount;
+    public int InactivityTime;
+    public String ItemDescURL;
+    public String ImageURL;
+
 
 }
