@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Auctions"
-            android:id="@+id/button7"
+            android:id="@+id/button_auctions"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_weight="1" />
@@ -61,20 +61,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Category"
-            android:id="@+id/button8"
-            android:layout_alignBottom="@+id/button7"
-            android:layout_toRightOf="@+id/button7"
-            android:layout_toEndOf="@+id/button7"
+            android:id="@+id/button_category"
+            android:layout_alignBottom="@+id/button_auctions"
+            android:layout_toRightOf="@+id/button_auctions"
+            android:layout_toEndOf="@+id/button_auctions"
             android:layout_weight="1" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Locations"
-            android:id="@+id/button9"
-            android:layout_alignBottom="@+id/button8"
-            android:layout_toRightOf="@+id/button8"
-            android:layout_toEndOf="@+id/button8"
+            android:id="@+id/button_locations"
+            android:layout_alignBottom="@+id/button_category"
+            android:layout_toRightOf="@+id/button_category"
+            android:layout_toEndOf="@+id/button_category"
             android:layout_weight="1" />
     </LinearLayout>
 
