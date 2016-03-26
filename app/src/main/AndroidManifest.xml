@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.charlestrudel.auction_project">
-<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +20,8 @@
         <activity android:name=".Auctions" />
         <activity android:name=".Category" />
         <activity android:name=".Locations" />
-        <activity android:name=".ListViewGeneral"></activity>
+        <activity android:name=".ListViewGeneral" />
+        <activity android:name=".rangee"></activity>
     </application>
 
 </manifest>

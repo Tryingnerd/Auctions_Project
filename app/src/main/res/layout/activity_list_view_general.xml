@@ -82,28 +82,17 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/linearLayout4"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true">
 
-        <TextView
+        <ListView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text"
-            android:id="@+id/textView6"
-            android:layout_weight="0.6"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView3"
-            android:layout_weight="0.3"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp" />
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_items"
+            android:layout_below="@+id/linearLayout4"
+            android:layout_weight="1" />
     </LinearLayout>
 
 </RelativeLayout>
