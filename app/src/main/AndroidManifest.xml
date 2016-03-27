@@ -21,7 +21,6 @@
         <activity android:name=".Category" />
         <activity android:name=".Locations" />
         <activity android:name=".ListViewGeneral" />
-        <activity android:name=".rangee"></activity>
     </application>
 
 </manifest>

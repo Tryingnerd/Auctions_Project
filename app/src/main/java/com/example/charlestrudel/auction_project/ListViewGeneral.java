@@ -14,6 +14,8 @@ public class ListViewGeneral extends AppCompatActivity {
     ListView listItems;
     public final int n = 30;
 
+    MyAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +23,8 @@ public class ListViewGeneral extends AppCompatActivity {
 
         listItems = (ListView)findViewById(R.id.listView_items);
 
+        adapter = new MyAdapter();
+        listItems.setAdapter(adapter);
     }
 
     public class MyAdapter extends BaseAdapter
@@ -51,12 +55,15 @@ public class ListViewGeneral extends AppCompatActivity {
             View v = convertView;
             if(v == null)
             {
-                v = inflater.inflate(android.R.layout.activity_list_item, parent, false);
+                v = inflater.inflate(R.layout.rangee, parent, false);
             }
-            TextView itemName = (TextView)v.findViewById(android.R.id.text1);
-            TextView HighBidAmount = (TextView)v.findViewById(android.R.id.text1);
-            TextView AucEndDt = (TextView)v.findViewById(android.R.id.text1);
+            TextView itemName = (TextView)v.findViewById(R.id.textView_ItemName);
+            TextView HighBidAmount = (TextView)v.findViewById(R.id.textView_highBid);
+            TextView AucEndDt = (TextView)v.findViewById(R.id.textView_endDate);
 
+            itemName.setText("Product: "+((Integer)position).toString());
+            HighBidAmount.setText("Highest bid: "+((Integer)position).toString());
+            AucEndDt.setText("End Date: "+((Integer)position).toString());
             return null;
         }
     }
