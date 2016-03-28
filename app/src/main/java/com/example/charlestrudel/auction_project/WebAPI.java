@@ -2,6 +2,7 @@ package com.example.charlestrudel.auction_project;
 
 
 import com.example.charlestrudel.auction_project.GSAAuctions.Results;
+import com.example.charlestrudel.auction_project.GSAAuctions.Root;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 
@@ -21,7 +22,7 @@ public class WebAPI {
         url = "https://api.data.gov/gsa/auctions?api_key=gg8oDHc7bYECD65aAmIDoDRfaSw09kA9YYkov6Wu&format=JSON";
     }
 
-    public void run() throws IOException{
+    public Results run() throws IOException{
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder().url(url).build();
         Response response = client.newCall(request).execute();
@@ -29,9 +30,18 @@ public class WebAPI {
 
         //Parser le contenu de la demande
         Moshi moshi = new Moshi.Builder().build();
-        JsonAdapter<Results> jsonAdapter = moshi.adapter(Results.class);
-        Results results = jsonAdapter.fromJson(json);
+        JsonAdapter<Root> jsonAdapter = moshi.adapter(Root.class);
+        Root root = jsonAdapter.fromJson(json);
 
         //Rendu 20e minute du tutoriel
+        Results genericResults;
+        for(int i =0; i<root.results.size(); i++)
+        {
+            genericResults = root.results.get(i);
+
+            return genericResults;
+        }
+        return null;
+
     }
 }
