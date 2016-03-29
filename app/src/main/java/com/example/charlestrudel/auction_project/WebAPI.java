@@ -7,6 +7,7 @@ import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 
 import java.io.IOException;
+import java.util.List;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -22,7 +23,7 @@ public class WebAPI {
         url = "https://api.data.gov/gsa/auctions?api_key=gg8oDHc7bYECD65aAmIDoDRfaSw09kA9YYkov6Wu&format=JSON";
     }
 
-    public Results run() throws IOException{
+    public List<Results> run() throws IOException{
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder().url(url).build();
         Response response = client.newCall(request).execute();
@@ -33,15 +34,16 @@ public class WebAPI {
         JsonAdapter<Root> jsonAdapter = moshi.adapter(Root.class);
         Root root = jsonAdapter.fromJson(json);
 
-        //Rendu 20e minute du tutoriel
-        Results genericResults;
-        for(int i =0; i<root.results.size(); i++)
-        {
-            genericResults = root.results.get(i);
+        //Ajouter ici les conditions pour afficher les résultats voulu seulement.
+        //On doit ajouter une variable qui est paramètre et qui sera passé depuis une autre page
+        //nos conditions dépendront de cette variable. voir tutoriel listview avancé
+        //Va falloir ne pas afficher l'objet d'une position donnée qu'on ne veut pas.
+        List<Results> genericResults;
 
-            return genericResults;
-        }
-        return null;
+        genericResults = root.results;
+
+
+        return genericResults;
 
     }
 }

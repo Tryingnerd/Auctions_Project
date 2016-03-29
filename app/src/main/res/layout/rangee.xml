@@ -19,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/textView_ItemName"
+                android:id="@+id/rangee_ItemName"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="0.3"
@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/textView_highBid"
+                android:id="@+id/rangee_highBid"
                 android:layout_weight="0.3"
                 android:textSize="15dp" />
 
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/textView_endDate"
+                android:id="@+id/rangee_endDate"
                 android:layout_weight="0.3"
                 android:textSize="15dp"
                 android:textStyle="bold" />
@@ -47,8 +47,10 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/imageView"
-            android:layout_weight="0.7" />
+            android:id="@+id/rangee_ima"
+            android:layout_weight="0.7"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical" />
     </LinearLayout>
 
 </LinearLayout>
